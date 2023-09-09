@@ -1,37 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:friendsgames/start.dart';
 
 void main() {
-  runApp(const home());
+  runApp(const MyApp());
 }
 
-class home extends StatefulWidget {
-  const home({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-  @override
-  State<home> createState() => _homeState();
-}
-class _homeState extends State<home> {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      home:
-      Scaffold(
-          body:Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFF30CFD0),
-                    Color(0xFF330867),
-                    // Color(0xFF30CFD0),
-                    //Color(0xFF330867),
-                  ],
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                )
-            ),
-
-          )
+    return MaterialApp(
+      // App
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
+      home: home(),
     );
   }
 }
