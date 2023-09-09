@@ -13,6 +13,7 @@ class _homeState extends State<home> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+
         gradient: LinearGradient(
           colors: [
             Color(0xFF30CFD0),
@@ -28,10 +29,12 @@ class _homeState extends State<home> {
           slivers: <Widget>[
             SliverAppBar(
               centerTitle: true,
-              toolbarHeight: 120,
+              toolbarHeight: 130,
               pinned: true,
               flexibleSpace: Container(
                 decoration: BoxDecoration(
+
+                  color: Colors.white.withOpacity(0.8),
 
                   gradient: LinearGradient(
                     colors: [
