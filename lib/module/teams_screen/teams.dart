@@ -5,6 +5,8 @@ import 'package:friendsgames/shared/components/components.dart';
 import 'package:friendsgames/shared/components/constants.dart';
 import 'package:friendsgames/module/start_screen/start.dart';
 
+import '../../pageview.dart';
+
 class TeamsPage extends StatefulWidget {
   TeamsPage({Key? key}) : super(key: key);
 
@@ -64,16 +66,18 @@ class _TeamsPageState extends State<TeamsPage> {
                 ),
               )
             ],
+
             body: Form(
+
               key: formKey,
               child: SingleChildScrollView(
                 physics: const NeverScrollableScrollPhysics(),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // const SizedBox(
-                    //   height: 50,
-                    // ),
+                     const SizedBox(
+                       height: 70,
+                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -145,7 +149,7 @@ class _TeamsPageState extends State<TeamsPage> {
                           if (formKey.currentState!.validate()) {
                             Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
-                                builder: (context) => const StartPage(),
+                                builder: (context) => const page_view(),
                               ),
                             );
                           }
