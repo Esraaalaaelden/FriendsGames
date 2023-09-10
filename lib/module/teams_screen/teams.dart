@@ -5,14 +5,14 @@ import 'package:friendsgames/shared/components/components.dart';
 import 'package:friendsgames/shared/components/constants.dart';
 import 'package:friendsgames/module/start_screen/start.dart';
 
-class TeamsPage extends StatefulWidget {
-  TeamsPage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  HomePage({Key? key}) : super(key: key);
 
   @override
-  State<TeamsPage> createState() => _TeamsPageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _TeamsPageState extends State<TeamsPage> {
+class _HomePageState extends State<HomePage> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   var teamOneController = TextEditingController();
   var teamTwoController = TextEditingController();
@@ -66,13 +66,11 @@ class _TeamsPageState extends State<TeamsPage> {
             body: Form(
               key: formKey,
               child: SingleChildScrollView(
-                physics: const NeverScrollableScrollPhysics(),
+                physics: NeverScrollableScrollPhysics(),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(
-                      height: 50,
-                    ),
+                    SizedBox(height: 100,),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -125,11 +123,20 @@ class _TeamsPageState extends State<TeamsPage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 50,
+                      height: 25,
                     ),
                     Container(
                       height: 55,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
+
+                        //    boxShadow: <BoxShadow>[
+                        //   BoxShadow(
+                        //   color: Colors.black,
+                        //   blurRadius: 5.0,
+                        //   offset: Offset(0.0, 0.20),
+                        // ),
+                        //   ],
+
                         gradient: LinearGradient(
                           colors: [
                             primaryColor,
@@ -161,13 +168,11 @@ class _TeamsPageState extends State<TeamsPage> {
                     const SizedBox(
                       height: 15,
                     ),
+
                   ],
                 ),
               ),
             ),
-          ),
-          bottomNavigationBar: Image(
-            image: AssetImage('assets/Rectangle 3.png'),
           ),
         ),
       ),
