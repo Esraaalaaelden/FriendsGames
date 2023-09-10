@@ -3,16 +3,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:friendsgames/shared/components/components.dart';
 import 'package:friendsgames/shared/components/constants.dart';
-import 'package:friendsgames/start.dart';
+import 'package:friendsgames/module/start_screen/start.dart';
 
-class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+class TeamsPage extends StatefulWidget {
+  TeamsPage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<TeamsPage> createState() => _TeamsPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _TeamsPageState extends State<TeamsPage> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   var teamOneController = TextEditingController();
   var teamTwoController = TextEditingController();
@@ -66,11 +66,13 @@ class _HomePageState extends State<HomePage> {
             body: Form(
               key: formKey,
               child: SingleChildScrollView(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(height: 100,),
+                    const SizedBox(
+                      height: 50,
+                    ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -123,20 +125,11 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 25,
+                      height: 50,
                     ),
                     Container(
                       height: 55,
-                      decoration: BoxDecoration(
-
-                        //    boxShadow: <BoxShadow>[
-                        //   BoxShadow(
-                        //   color: Colors.black,
-                        //   blurRadius: 5.0,
-                        //   offset: Offset(0.0, 0.20),
-                        // ),
-                        //   ],
-
+                      decoration: const BoxDecoration(
                         gradient: LinearGradient(
                           colors: [
                             primaryColor,
@@ -168,11 +161,13 @@ class _HomePageState extends State<HomePage> {
                     const SizedBox(
                       height: 15,
                     ),
-
                   ],
                 ),
               ),
             ),
+          ),
+          bottomNavigationBar: Image(
+            image: AssetImage('assets/Rectangle 3.png'),
           ),
         ),
       ),
