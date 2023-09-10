@@ -99,6 +99,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           controller: pageController,
                           children: [
                             Container(
+                              //height: 10,width: 10,
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).pushReplacement(
@@ -108,26 +109,83 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 child: Image(
-                                    image: AssetImage('assets/Frame 1.png')),
+                                    image: AssetImage('assets/Frame 1.png',)),
                               ),
                             ),
                             Container(
-                              child: const Text(
-                                'Car ot car',
-                                style: TextStyle(
-                                  fontSize: 20,
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => StartPage(),
+                                    ),
+                                  );
+                                },
+                                child: Column(
+                                  children: [
+                                    Image(
+                                        image: AssetImage('assets/5.png')),
+                                    Text('لبس صاحبك' ,style:TextStyle(
+                                      fontSize: 30, fontWeight: FontWeight.bold,
+                                    ),),
+                                  ],
                                 ),
+
                               ),
                             ),
                             Container(
-                              child: const Text(
-                                'car',
-                                style: TextStyle(
-                                  fontSize: 20,
-                                ),
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => StartPage(),
+                                    ),
+                                  );
+                                },
+                                child: Image(
+                                    image: AssetImage('assets/8.png')),
                               ),
                             ),
-                            Container(),
+                            Container(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => StartPage(),
+                                    ),
+                                  );
+                                },
+                                child: Image(
+                                    image: AssetImage('assets/9.png')),
+                              ),
+                            ),
+                            Container(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => StartPage(),
+                                    ),
+                                  );
+                                },
+                                child: Image(
+                                    image: AssetImage('assets/1.png')),
+                              ),
+                            ),
+                            Container(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => StartPage(),
+                                    ),
+                                  );
+                                },
+                                child: Image(
+                                    image: AssetImage('assets/2.png')),
+                              ),
+                            ),
+
                           ],
                         ),
                       ),
