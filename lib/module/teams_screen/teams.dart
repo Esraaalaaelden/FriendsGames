@@ -1,10 +1,7 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:friendsgames/shared/components/components.dart';
 import 'package:friendsgames/shared/components/constants.dart';
-
-
 import '../../home_screen/home.dart';
 
 class TeamsPage extends StatefulWidget {
