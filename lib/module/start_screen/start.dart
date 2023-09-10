@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:friendsgames/home_page.dart';
+import 'package:friendsgames/module/teams_screen/teams.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _StartPageState extends State<StartPage> {
         onTap: () {
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
-              builder: (context) => HomePage(),
+              builder: (context) => TeamsPage(),
             ),
           );
         },

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:friendsgames/start.dart';
+import 'package:friendsgames/module/start_screen/start.dart';
 
 void main() {
   runApp(const MyApp());

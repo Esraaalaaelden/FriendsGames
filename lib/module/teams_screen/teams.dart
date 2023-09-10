@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(height: 70,),
+                    SizedBox(height: 100,),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
@@ -123,10 +123,10 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     const SizedBox(
-                      height: 20,
+                      height: 25,
                     ),
                     Container(
-                      height: 40,
+                      height: 55,
                       decoration: BoxDecoration(
 
                         //    boxShadow: <BoxShadow>[
