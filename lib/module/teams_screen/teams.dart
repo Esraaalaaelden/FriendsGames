@@ -3,9 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:friendsgames/shared/components/components.dart';
 import 'package:friendsgames/shared/components/constants.dart';
-import 'package:friendsgames/module/start_screen/start.dart';
 
-import '../../pageview.dart';
+
+import '../../home_screen/home.dart';
 
 class TeamsPage extends StatefulWidget {
   TeamsPage({Key? key}) : super(key: key);
@@ -13,7 +13,7 @@ class TeamsPage extends StatefulWidget {
   @override
   State<TeamsPage> createState() => _TeamsPageState();
 }
-//spaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaace
+
 
 class _TeamsPageState extends State<TeamsPage> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -149,12 +149,13 @@ class _TeamsPageState extends State<TeamsPage> {
                           if (formKey.currentState!.validate()) {
                             Navigator.of(context).pushReplacement(
                               MaterialPageRoute(
-                                builder: (context) => const page_view(),
+                                builder: (context) =>  HomeScreen(),
                               ),
                             );
                           }
                         },
                         style: ElevatedButton.styleFrom(
+
                           backgroundColor: Colors.transparent,
                           shadowColor: Colors.transparent,
                         ),
