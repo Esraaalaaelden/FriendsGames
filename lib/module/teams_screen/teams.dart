@@ -71,16 +71,17 @@ class _TeamsPageState extends State<TeamsPage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const SizedBox(
-                      height: 50,
-                    ),
+                    // const SizedBox(
+                    //   height: 50,
+                    // ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Expanded(
-                            child: defaultTextFormField(
+                            child:
+                            defaultTextFormField(
                               validator: (String? value) {
                                 if (value!.isEmpty) {
                                   return 'you must type team one name!';
