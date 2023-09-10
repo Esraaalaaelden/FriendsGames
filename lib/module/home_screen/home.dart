@@ -2,8 +2,9 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../module/start_screen/start.dart';
-import '../module/teams_screen/teams.dart';
+import '../start_screen/start.dart';
+import '../teams_screen/teams.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
