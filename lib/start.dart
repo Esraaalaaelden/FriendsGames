@@ -1,61 +1,73 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:friendsgames/home_page.dart';
 
-class home extends StatefulWidget {
-  const home({Key? key}) : super(key: key);
+class StartPage extends StatefulWidget {
+  const StartPage({Key? key}) : super(key: key);
 
   @override
-  State<home> createState() => _homeState();
+  State<StartPage> createState() => _StartPageState();
 }
 
-class _homeState extends State<home> {
+class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-
-        gradient: LinearGradient(
-          colors: [
-            Color(0xFF30CFD0),
-            Color(0xFF330867),
-            // Color(0xFF30CFD0),
-            //Color(0xFF330867),
-          ],
-        ),
-      ),
-      child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: CustomScrollView(
-          slivers: <Widget>[
-            SliverAppBar(
-              centerTitle: true,
-              toolbarHeight: 130,
-              pinned: true,
-              flexibleSpace: Container(
-                decoration: BoxDecoration(
-
-                  color: Colors.white.withOpacity(0.8),
-
-                  gradient: LinearGradient(
-                    colors: [
-                      Color(0xFF30CFD0),
-                      Color(0xFF330867),
-                      // Color(0xFF30CFD0),
-                      //Color(0xFF330867),
-                    ],
-                  ),
-                ),
-              ),
-              title: Image(
-                image: AssetImage("assets/Rectangle 2.png"),
-                height: 149,
-                width: 252,
-              ),
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: GestureDetector(
+        onTap: () {
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(
+              builder: (context) => HomePage(),
             ),
-            SliverList(delegate: SliverChildListDelegate([
-
-            ]))
-          ],
+          );
+        },
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xFF30CFD0),
+                Color(0xFF330867),
+                // Color(0xFF30CFD0),
+                //Color(0xFF330867),
+              ],
+            ),
+          ),
+          child: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Spacer(),
+                Animate(
+                  child: Image(
+                    image: AssetImage("assets/sba7o.png"),
+                  )
+                      .animate()
+                      .fade(duration: 2.seconds)
+                      .scale(duration: 2.seconds),
+                ),
+                SizedBox(height: 20,),
+                Animate(
+                  child: Image(
+                    image: AssetImage("assets/Rectangle 2.png"),
+                  )
+                      .animate()
+                      .fade(duration: 2.seconds)
+                      .scale(duration: 2.seconds),
+                ),
+                Spacer(),
+                Animate(
+                  child: Image(
+                    image: AssetImage("assets/Rectangle 3.png"),
+                  )
+                      .animate()
+                      .fade(duration: 2.seconds)
+                      .moveX(duration: 2.seconds),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
