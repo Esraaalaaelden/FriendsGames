@@ -34,9 +34,11 @@ class _TeamsPageState extends State<TeamsPage> {
         child: Scaffold(
           backgroundColor: Colors.transparent,
           body: NestedScrollView(
+            
             headerSliverBuilder:
                 (BuildContext context, bool innerBoxIsScrolled) => <Widget>[
               SliverAppBar(
+                
                 elevation: 20,
                 automaticallyImplyLeading: false,
                 centerTitle: true,
@@ -167,7 +169,10 @@ class _TeamsPageState extends State<TeamsPage> {
                 ),
               ),
             ),
+            
           ),
+          bottomNavigationBar: Image(image: AssetImage('assets/Rectangle 3.png'),),
+          
         ),
       ),
     );
