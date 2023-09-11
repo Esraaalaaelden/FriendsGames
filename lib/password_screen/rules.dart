@@ -83,11 +83,11 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 onTap: () {
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                      builder: (context) => HomeScreen(),
+                                      builder: (context) => const HomeScreen(),
                                     ),
                                   );
                                 },
-                                child: Image(
+                                child: const Image(
                                   image: AssetImage(
                                     'assets/return.png',
                                   ),
@@ -95,30 +95,30 @@ class _PasswordRulesState extends State<PasswordRules> {
                                   width: 40,
                                 )),
                           ),
-                          Text(
+                          const Text(
                             'كلمه السر',
                             textAlign: TextAlign.end,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
                               fontSize: 40,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 70,
                           ),
                         ],
                       ),
                       Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         width: double.infinity,
-                        child: Column(
+                        child: const Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text(
                               ': القوانين',
                               textAlign: TextAlign.end,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 fontSize: 40,
@@ -131,7 +131,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                             Text(
                               'ممنوع ذكر اسم اي لاعب أو فريق أو جنسية اللاعب أو رقمه',
                               textAlign: TextAlign.end,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 fontSize: 20,
@@ -139,9 +139,9 @@ class _PasswordRulesState extends State<PasswordRules> {
                             ),
                             SizedBox(height: 10,),
                             Text(
-                              ' يجب ذكر كلمة واحدة فقط في كل مرة و في حالة ذكر أكثر من كلمة يذهب الدور للمنافس .',
+                              ' يجب ذكر كلمة واحدة فقط في كل مرة و في حالة ذكر أكثر من كلمة يذهب الدور للمنافس ',
                               textAlign: TextAlign.end,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 fontSize: 20,
@@ -151,7 +151,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                             Text(
                               'متاح 30 ثانية لكل فريق لذكر الدليل و سماع الإجابه',
                               textAlign: TextAlign.end,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 fontSize: 20,
@@ -161,7 +161,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                             Text(
                               'يتم لعب 8 جولات و في حالة التعادل يتم لعب جولة فاصلة ',
                               textAlign: TextAlign.end,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 fontSize: 20,
