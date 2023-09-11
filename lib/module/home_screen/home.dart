@@ -116,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 child: Image(
-                                    image: AssetImage('assets/Frame 1.png',)),
+                                    image: AssetImage('assets/password.png',)),
                               ),
                             ),
                             Container(
