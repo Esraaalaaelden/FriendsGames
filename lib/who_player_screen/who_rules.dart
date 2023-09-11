@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import '../module/home_screen/home.dart';
 import '../shared/components/constants.dart';
 
-class PasswordRules extends StatefulWidget {
-  const PasswordRules({Key? key}) : super(key: key);
+class WhoPlayerRules extends StatefulWidget {
+  const WhoPlayerRules({Key? key}) : super(key: key);
 
   @override
-  State<PasswordRules> createState() => _PasswordRulesState();
+  State<WhoPlayerRules> createState() => _WhoPlayerRulesState();
 }
 
-class _PasswordRulesState extends State<PasswordRules> {
+class _WhoPlayerRulesState extends State<WhoPlayerRules> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -98,7 +98,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 )),
                           ),
                           const Text(
-                            'كلمه السر',
+                            ' مين اللاعب ',
                             textAlign: TextAlign.end,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -131,7 +131,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                             ),
 
                             Text(
-                              'ممنوع ذكر اسم اي لاعب أو فريق أو جنسية اللاعب أو رقمه',
+                              'هناك 5 أدلة من الأسهل للأصعب لكل لاعب و يتم لعب 3 جولات ',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -141,27 +141,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                             ),
                             SizedBox(height: 10,),
                             Text(
-                              ' يجب ذكر كلمة واحدة فقط في كل مرة و في حالة ذكر أكثر من كلمة يذهب الدور للمنافس ',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            SizedBox(height: 10,),
-                            Text(
-                              'متاح 30 ثانية لكل فريق لذكر الدليل و سماع الإجابه',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            SizedBox(height: 10,),
-                            Text(
-                              'يتم لعب 8 جولات و في حالة التعادل يتم لعب جولة فاصلة ',
+                              '   في حالة تخمين اسم خاطئ من الفريق تتحول أفضلية الاجابة الى الفريق الأخر بعد سماع الدليل القادم',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -172,7 +152,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 30,),
+                      SizedBox(height: 140,),
                       Container(
                         height: 55,
                         decoration: const BoxDecoration(

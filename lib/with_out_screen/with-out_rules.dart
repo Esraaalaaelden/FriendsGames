@@ -5,14 +5,14 @@ import 'package:flutter/material.dart';
 import '../module/home_screen/home.dart';
 import '../shared/components/constants.dart';
 
-class PasswordRules extends StatefulWidget {
-  const PasswordRules({Key? key}) : super(key: key);
+class WithOutRules extends StatefulWidget {
+  const WithOutRules({Key? key}) : super(key: key);
 
   @override
-  State<PasswordRules> createState() => _PasswordRulesState();
+  State<WithOutRules> createState() => _WithOutRulesState();
 }
 
-class _PasswordRulesState extends State<PasswordRules> {
+class _WithOutRulesState extends State<WithOutRules> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -98,7 +98,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 )),
                           ),
                           const Text(
-                            'كلمه السر',
+                            ' بدون كلام  ',
                             textAlign: TextAlign.end,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -107,7 +107,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                             ),
                           ),
                           const SizedBox(
-                            width: 70,
+                            width: 30,
                           ),
                         ],
                       ),
@@ -127,11 +127,11 @@ class _PasswordRulesState extends State<PasswordRules> {
                               ),
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 6,
                             ),
 
                             Text(
-                              'ممنوع ذكر اسم اي لاعب أو فريق أو جنسية اللاعب أو رقمه',
+                              'يتم تمثيل الأسم لزميلك في الفريق و ممنوع الإشارة لأي شئ موجود بالغرفة',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -139,9 +139,9 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(height: 10,),
+                            SizedBox(height: 6,),
                             Text(
-                              ' يجب ذكر كلمة واحدة فقط في كل مرة و في حالة ذكر أكثر من كلمة يذهب الدور للمنافس ',
+                              'متاح ٤٥ ثانية لكل فريق لتخمين الاسم , متاح للفريق ٣ تخمينات فقط ',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -149,9 +149,9 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(height: 10,),
+                            SizedBox(height: 6,),
                             Text(
-                              'متاح 30 ثانية لكل فريق لذكر الدليل و سماع الإجابه',
+                              'في حالة فشل الفريق في تخمين اسم اللاعب , متاح للفريق الأخر التخمين مرة واحدة في ١٠ ثواني',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -159,9 +159,9 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(height: 10,),
+                            SizedBox(height: 6,),
                             Text(
-                              'يتم لعب 8 جولات و في حالة التعادل يتم لعب جولة فاصلة ',
+                              'يتم لعب ٨ جولات و في حالة التعادل يتم لعب جولة فاصلة',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -172,7 +172,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 30,),
+                      SizedBox(height: 10,),
                       Container(
                         height: 55,
                         decoration: const BoxDecoration(
