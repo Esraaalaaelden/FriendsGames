@@ -2,7 +2,7 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../password_screen/password.dart';
+import '../../password_screen/rules.dart';
 import '../start_screen/start.dart';
 import '../teams_screen/teams.dart';
 
@@ -97,6 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Expanded(
                         child: PageView(
+
                           controller: pageController,
                           children: [
                             Container(
@@ -105,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 onTap: () {
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                      builder: (context) => RulsPassword(),
+                                      builder: (context) => PasswordRules(),
                                     ),
                                   );
                                 },
@@ -118,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 onTap: () {
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                      builder: (context) =>RulsPassword(),
+                                      builder: (context) =>PasswordRules(),
                                     ),
                                   );
                                 },
