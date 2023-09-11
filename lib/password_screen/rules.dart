@@ -125,10 +125,11 @@ class _PasswordRulesState extends State<PasswordRules> {
                               ),
                             ),
                             SizedBox(
-                              height: 25,
+                              height: 20,
                             ),
+
                             Text(
-                             'ممنوع ذكر اسم اي لاعب أو فريق أو جنسية اللاعب أو رقمه   ' ,
+                              'ممنوع ذكر اسم اي لاعب أو فريق أو جنسية اللاعب أو رقمه',
                               textAlign: TextAlign.end,
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -136,11 +137,9 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            SizedBox(height: 10,),
                             Text(
-                              ' يجب ذكر كلمة واحدة فقط في كل مرة و في حالة ذكر أكثر من كلمة يذهب الدور للمنافس ',
+                              ' يجب ذكر كلمة واحدة فقط في كل مرة و في حالة ذكر أكثر من كلمة يذهب الدور للمنافس .',
                               textAlign: TextAlign.end,
                               style: const TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -148,9 +147,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            SizedBox(height: 10,),
                             Text(
                               'متاح 30 ثانية لكل فريق لذكر الدليل و سماع الإجابه',
                               textAlign: TextAlign.end,
@@ -160,9 +157,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
+                            SizedBox(height: 10,),
                             Text(
                               'يتم لعب 8 جولات و في حالة التعادل يتم لعب جولة فاصلة ',
                               textAlign: TextAlign.end,
