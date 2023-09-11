@@ -156,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 child: Image(
-                                    image: AssetImage('assets/9.png')),
+                                    image: AssetImage('assets/IMG-20230911-WA0002-removebg-preview.png')),
                               ),
                             ),
                             Container(
@@ -169,7 +169,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 child: Image(
-                                    image: AssetImage('assets/1.png')),
+                                    image: AssetImage('assets/عروستى_بالعكس_3_-removebg-preview.png')),
                               ),
                             ),
                             Container(
@@ -182,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 child: Image(
-                                    image: AssetImage('assets/2.png')),
+                                    image: AssetImage('assets/IMG-20230911-WA0001-removebg-preview.png')),
                               ),
                             ),
 
