@@ -124,10 +124,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 child: Column(
                                   children: [
                                     Image(
-                                        image: AssetImage('assets/5.png')),
-                                    Text('لبس صاحبك' ,style:TextStyle(
-                                      fontSize: 30, fontWeight: FontWeight.bold,
-                                    ),),
+                                        image: AssetImage('assets/five-x-ten.png')),
+
                                   ],
                                 ),
 
@@ -143,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 child: Image(
-                                    image: AssetImage('assets/8.png')),
+                                    image: AssetImage('assets/3rosty.png')),
                               ),
                             ),
                             Container(
@@ -156,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 child: Image(
-                                    image: AssetImage('assets/IMG-20230911-WA0002-removebg-preview.png')),
+                                    image: AssetImage('assets/without-talking.png')),
                               ),
                             ),
                             Container(
@@ -169,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 child: Image(
-                                    image: AssetImage('assets/عروستى_بالعكس_3_-removebg-preview.png')),
+                                    image: AssetImage('assets/guess-the-player.png')),
                               ),
                             ),
                             Container(
@@ -182,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   );
                                 },
                                 child: Image(
-                                    image: AssetImage('assets/IMG-20230911-WA0001-removebg-preview.png')),
+                                    image: AssetImage('assets/f-your-friend.png')),
                               ),
                             ),
 
