@@ -146,11 +146,12 @@ class _FiveGameState extends State<FiveGame> {
   @override
   void initState() {
     super.initState();
+    changeQuestion();
     startCountdown();
   }
   void startCountdown() {
     countdownTimer = Timer(Duration(seconds: countdownSeconds), () {
-      changeQuestion();
+
     });
   }
 
@@ -280,22 +281,27 @@ class _FiveGameState extends State<FiveGame> {
                           textAlign: TextAlign.center,
                         )
                       else
+
                       Column(
                         children: [
                           Text(
                             'Time remaining: ${countdownSeconds - countdownTimer.tick}',
                             style: TextStyle(fontSize: 18.0),
                           ),
-                          Container(
-                            padding: EdgeInsets.all(20.0),
-                            decoration: BoxDecoration(
-                              border: Border.all(),
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            child: Text(
-                              questions[currentQuestionIndex],
-                              style: TextStyle(fontSize: 18.0),
-                              textAlign: TextAlign.center,
+                          Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Container(
+                              padding: EdgeInsets.all(20.0),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(),
+                                borderRadius: BorderRadius.circular(10.0),
+                              ),
+                              child: Text(
+                                questions[currentQuestionIndex],
+                                style: TextStyle(fontSize: 18.0),
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ],
