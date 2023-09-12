@@ -1,9 +1,9 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:friendsgames/module/5_10_screen/5_10rules.dart';
 
-import '../module/home_screen/home.dart';
-import '5_10rules.dart';
+import '../home_screen/home.dart';
 
 class FiveGame extends StatefulWidget {
   const FiveGame({Key? key}) : super(key: key);
@@ -85,7 +85,7 @@ class _FiveGameState extends State<FiveGame> {
                                 onTap: () {
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                      builder: (context) => const Rulse(),
+                                      builder: (context) => const FiveXTenRules(),
                                     ),
                                   );
                                 },
@@ -107,9 +107,7 @@ class _FiveGameState extends State<FiveGame> {
                               fontSize: 40,
                             ),
                           ),
-                          const SizedBox(
-                            width: 1,
-                          ),
+
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: GestureDetector(

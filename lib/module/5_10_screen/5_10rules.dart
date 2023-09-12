@@ -2,17 +2,18 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../module/home_screen/home.dart';
-import '../shared/components/constants.dart';
+import '../../shared/components/constants.dart';
+import '../home_screen/home.dart';
+import '5_10.dart';
 
-class ArostyRulse extends StatefulWidget {
-  const ArostyRulse({Key? key}) : super(key: key);
+class FiveXTenRules extends StatefulWidget {
+  const FiveXTenRules({Key? key}) : super(key: key);
 
   @override
-  State<ArostyRulse> createState() => _ArostyRulseState();
+  State<FiveXTenRules> createState() => _FiveXTenRulesState();
 }
 
-class _ArostyRulseState extends State<ArostyRulse> {
+class _FiveXTenRulesState extends State<FiveXTenRules> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -98,7 +99,7 @@ class _ArostyRulseState extends State<ArostyRulse> {
                                 )),
                           ),
                           const Text(
-                            'عروستي بالعكس',
+                            '  5 x 10 ',
                             textAlign: TextAlign.end,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -107,7 +108,7 @@ class _ArostyRulseState extends State<ArostyRulse> {
                             ),
                           ),
                           const SizedBox(
-                            width: 30,
+                            width: 70,
                           ),
                         ],
                       ),
@@ -127,11 +128,11 @@ class _ArostyRulseState extends State<ArostyRulse> {
                               ),
                             ),
                             SizedBox(
-                              height: 6,
+                              height: 20,
                             ),
 
                             Text(
-                              'تتم المزايدة من كل لاعب على قدرة زميله في الفريق على معرفة الاسم بأقل عدد ممكن من الأسئلة , صاحب الرقم الأقل من بين المراهنين هو من سيشارك في الجولة',
+                              'يجب على اللاعب إجابة 5 إجابات . صحيحة في 10 ثواني بعد سماع السؤال ',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -139,29 +140,9 @@ class _ArostyRulseState extends State<ArostyRulse> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(height: 6,),
+                            SizedBox(height: 10,),
                             Text(
-                              'يجيب الحكم على الأسئلة بنعم او لأ فقط حتى في حالة عدم معرفة الاجابة ',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            SizedBox(height: 6,),
-                            Text(
-                              'في حالة عدم الوصول الاجابة يسأل الفريق الأخر سؤالين و في حالة عدم الوصول للإجابة تتم المزايدة مجددا',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            SizedBox(height: 6,),
-                            Text(
-                              'يتم لعب ٥ جولات ',
+                              '  يتم لعب 8 جولات و في حالة التعادل يتم لعبة جولة فاصلة  ',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -172,10 +153,10 @@ class _ArostyRulseState extends State<ArostyRulse> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(height: 140,),
                       Container(
                         height: 55,
-                        decoration: const BoxDecoration(
+                        decoration:  BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
                               primaryColor,
@@ -185,7 +166,13 @@ class _ArostyRulseState extends State<ArostyRulse> {
                           ),
                         ),
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) =>FiveGame(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,

@@ -1,19 +1,18 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:friendsgames/module/password_screen/password_rules.dart';
 
-import '../module/home_screen/home.dart';
-import '../shared/components/constants.dart';
-import '5_10.dart';
+import '../home_screen/home.dart';
 
-class Rulse extends StatefulWidget {
-  const Rulse({Key? key}) : super(key: key);
+class PasswordGame extends StatefulWidget {
+  const PasswordGame({Key? key}) : super(key: key);
 
   @override
-  State<Rulse> createState() => _RulseState();
+  State<PasswordGame> createState() => _PasswordGameState();
 }
 
-class _RulseState extends State<Rulse> {
+class _PasswordGameState extends State<PasswordGame> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -86,7 +85,7 @@ class _RulseState extends State<Rulse> {
                                 onTap: () {
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                      builder: (context) => const HomeScreen(),
+                                      builder: (context) => const PasswordRules(),
                                     ),
                                   );
                                 },
@@ -98,8 +97,9 @@ class _RulseState extends State<Rulse> {
                                   width: 40,
                                 )),
                           ),
+
                           const Text(
-                            '  5 x 10 ',
+                            'كلمه السر',
                             textAlign: TextAlign.end,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -107,82 +107,28 @@ class _RulseState extends State<Rulse> {
                               fontSize: 40,
                             ),
                           ),
-                          const SizedBox(
-                            width: 70,
+
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => const HomeScreen(),
+                                    ),
+                                  );
+                                },
+                                child: const Image(
+                                  image: AssetImage(
+                                    'assets/ion_home.png',
+                                  ),
+                                  height: 47,
+                                  width: 60,
+                                )),
                           ),
                         ],
                       ),
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        width: double.infinity,
-                        child:  Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Text(
-                              ': القوانين',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 40,
-                              ),
-                            ),
-                            SizedBox(
-                              height: 20,
-                            ),
 
-                            Text(
-                              'يجب على اللاعب إجابة 5 إجابات . صحيحة في 10 ثواني بعد سماع السؤال ',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            SizedBox(height: 10,),
-                            Text(
-                              '  يتم لعب 8 جولات و في حالة التعادل يتم لعبة جولة فاصلة  ',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: 140,),
-                      Container(
-                        height: 55,
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              primaryColor,
-                              Colors.blue,
-                              secondaryColor,
-                            ],
-                          ),
-                        ),
-                        child: ElevatedButton(
-                          onPressed: (){
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (context) =>FiveGame(),
-                              ),
-                            );
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.transparent,
-                            shadowColor: Colors.transparent,
-                          ),
-                          child: const Text(
-                            '    Start    ',
-                            style: TextStyle(color: Colors.white, fontSize: 25),
-                          ),
-                        ),
-                      ),
 
                     ],
                   ),

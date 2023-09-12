@@ -1,19 +1,18 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:friendsgames/password_screen/password.dart';
 
-import '../module/home_screen/home.dart';
-import '../shared/components/constants.dart';
+import '../../shared/components/constants.dart';
+import '../home_screen/home.dart';
 
-class PasswordRules extends StatefulWidget {
-  const PasswordRules({Key? key}) : super(key: key);
+class LbsRules extends StatefulWidget {
+  const LbsRules({Key? key}) : super(key: key);
 
   @override
-  State<PasswordRules> createState() => _PasswordRulesState();
+  State<LbsRules> createState() => _LbsRulesState();
 }
 
-class _PasswordRulesState extends State<PasswordRules> {
+class _LbsRulesState extends State<LbsRules> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -99,7 +98,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 )),
                           ),
                           const Text(
-                            'كلمه السر',
+                            'لبس صاحبك ',
                             textAlign: TextAlign.end,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -108,7 +107,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                             ),
                           ),
                           const SizedBox(
-                            width: 70,
+                            width: 30,
                           ),
                         ],
                       ),
@@ -128,11 +127,11 @@ class _PasswordRulesState extends State<PasswordRules> {
                               ),
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 6,
                             ),
 
                             Text(
-                              'ممنوع ذكر اسم اي لاعب أو فريق أو جنسية اللاعب أو رقمه',
+                              'كل لاعب يزايد على زميله في قدرته على معرفة عدد الإجابات في 30 ثانية',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -140,29 +139,40 @@ class _PasswordRulesState extends State<PasswordRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(height: 10,),
-                            Text(
-                              ' يجب ذكر كلمة واحدة فقط في كل مرة و في حالة ذكر أكثر من كلمة يذهب الدور للمنافس ',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            SizedBox(height: 10,),
-                            Text(
-                              'متاح 30 ثانية لكل فريق لذكر الدليل و سماع الإجابه',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            SizedBox(height: 10,),
+                            SizedBox(height: 6,),
                             Text(
                               'يتم لعب 8 جولات و في حالة التعادل يتم لعب جولة فاصلة ',
+                              textAlign: TextAlign.end,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(height: 6,),
+                            Text(
+                              '  يتم اعلان السؤال بعد انتهاء المزاد و يبدأ الوقت مباشرة  '
+                                  ,
+                              textAlign: TextAlign.end,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(height: 6,),
+                            Text(
+                              ' كل سؤال بنقطة و اذا لم يستطع الفائز بالمزاد الإجابة على السؤال تذهب النقطة للفريق الأخر ',
+                              textAlign: TextAlign.end,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(height: 6,),
+                            Text(
+                              ' يمكن زيادة ٣ إجابات للتأمين',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -173,10 +183,10 @@ class _PasswordRulesState extends State<PasswordRules> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 30,),
+                      SizedBox(height: 10,),
                       Container(
                         height: 55,
-                        decoration: const BoxDecoration(
+                        decoration:  BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
                               primaryColor,
@@ -186,13 +196,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                           ),
                         ),
                         child: ElevatedButton(
-                          onPressed: (){
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(
-                                builder: (context) =>PaswordGame(),
-                              ),
-                            );
-                          },
+                          onPressed: (){},
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,
