@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../module/home_screen/home.dart';
 import '../shared/components/constants.dart';
+import '5_10.dart';
 
 class Rulse extends StatefulWidget {
   const Rulse({Key? key}) : super(key: key);
@@ -165,7 +166,13 @@ class _RulseState extends State<Rulse> {
                           ),
                         ),
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) =>FiveGame(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,

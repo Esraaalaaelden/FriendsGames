@@ -1,6 +1,7 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:friendsgames/password_screen/password.dart';
 
 import '../module/home_screen/home.dart';
 import '../shared/components/constants.dart';
@@ -185,7 +186,13 @@ class _PasswordRulesState extends State<PasswordRules> {
                           ),
                         ),
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) =>PaswordGame(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,
