@@ -116,7 +116,7 @@ class _PasswordRulesState extends State<PasswordRules> {
                       Container(
                         padding: const EdgeInsets.all(10),
                         width: double.infinity,
-                        child:  const Column(
+                        child:  Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text(

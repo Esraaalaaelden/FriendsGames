@@ -170,7 +170,7 @@ class _FiveGameState extends State<FiveGame> {
                                 ),
                               ],
                             ),
-                          const SizedBox(height: 20.0),
+                          const SizedBox(height: 170),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -258,10 +258,10 @@ class _FiveGameState extends State<FiveGame> {
                                   ),
                                   child: Text(
                                     cubit.fiveXTenCurrentQuestionIndex == -1
-                                        ? 'Get Random Question'
-                                        : 'next',
+                                        ? 'Get  Question'
+                                        : '     Next     ',
                                     style: const TextStyle(
-                                        color: Colors.white, fontSize: 15),
+                                        color: Colors.white, fontSize: 20),
                                   ),
                                 ),
                               ),
