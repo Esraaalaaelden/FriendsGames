@@ -243,10 +243,10 @@ class _FiveGameState extends State<FiveGame> {
                                       ? null // Disable the button if isButtonDisabled is true
                                       :() {
                                     cubit.fiveXTenChangeQuestion();
-                                    countdownCubit.startCountdown(30);
+                                    countdownCubit.startCountdown(10);
                                     cubit.isButtonDisabled = true;
 
-                                    Future.delayed(const Duration(seconds: 30), () {
+                                    Future.delayed(const Duration(seconds: 10), () {
                                       setState(() {
                                         cubit.isButtonDisabled = false; // Enable the button
                                       });
