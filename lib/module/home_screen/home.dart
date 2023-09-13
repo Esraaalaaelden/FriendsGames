@@ -1,6 +1,8 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:friendsgames/cubit/game_cubit.dart';
 
 import '../2rosty_screen/arosty_rules.dart';
 import '../5_10_screen/5_10rules.dart';
@@ -25,6 +27,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    return BlocConsumer<GameCubit, GameState>(
+  listener: (context, state) {
+  },
+  builder: (context, state) {
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -205,5 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  },
+);
   }
 }
