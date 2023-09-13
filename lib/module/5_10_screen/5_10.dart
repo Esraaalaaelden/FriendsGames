@@ -9,8 +9,7 @@ import 'package:friendsgames/module/5_10_screen/5_10rules.dart';
 import '../home_screen/home.dart';
 
 class FiveGame extends StatefulWidget {
-   FiveGame({Key? key}) : super(key: key);
-
+  FiveGame({Key? key}) : super(key: key);
 
   @override
   State<FiveGame> createState() => _FiveGameState();
@@ -141,18 +140,19 @@ class _FiveGameState extends State<FiveGame> {
 // and so on...
 
   int currentQuestionIndex = -1;
-  int countdownSeconds = 30; // Change this to your desired countdown time in seconds
+  int countdownSeconds =
+      30; // Change this to your desired countdown time in seconds
   late Timer countdownTimer;
+
   @override
   void initState() {
     super.initState();
     changeQuestion();
     startCountdown();
   }
-  void startCountdown() {
-    countdownTimer = Timer(Duration(seconds: countdownSeconds), () {
 
-    });
+  void startCountdown() {
+    countdownTimer = Timer(Duration(seconds: countdownSeconds), () {});
   }
 
   void changeQuestion() {
@@ -281,37 +281,35 @@ class _FiveGameState extends State<FiveGame> {
                           textAlign: TextAlign.center,
                         )
                       else
-
-                      Column(
-                        children: [
-                          Text(
-                            'Time remaining: ${countdownSeconds - countdownTimer.tick}',
-                            style: TextStyle(fontSize: 18.0),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Container(
-                              padding: EdgeInsets.all(20.0),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(),
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              child: Text(
-                                questions[currentQuestionIndex],
-                                style: TextStyle(fontSize: 18.0),
-                                textAlign: TextAlign.center,
+                        Column(
+                          children: [
+                            Text(
+                              'Time remaining: ${countdownSeconds - countdownTimer.tick}',
+                              style: TextStyle(fontSize: 18.0),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Container(
+                                padding: EdgeInsets.all(20.0),
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  border: Border.all(),
+                                  borderRadius: BorderRadius.circular(10.0),
+                                ),
+                                child: Text(
+                                  questions[currentQuestionIndex],
+                                  style: TextStyle(fontSize: 18.0),
+                                  textAlign: TextAlign.center,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
+                          ],
+                        ),
                       SizedBox(height: 20.0),
                       ElevatedButton(
                         onPressed: changeQuestion,
                         child: Text('Get Random Question'),
                       ),
-
                     ],
                   ),
                 ),
@@ -325,6 +323,7 @@ class _FiveGameState extends State<FiveGame> {
       ),
     );
   }
+
   @override
   void dispose() {
     countdownTimer.cancel();

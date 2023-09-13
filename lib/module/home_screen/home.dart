@@ -2,13 +2,13 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../who_player_screen/who_rules.dart';
-import '../../with_out_screen/with-out_rules.dart';
 import '../2rosty_screen/arosty_rules.dart';
 import '../5_10_screen/5_10rules.dart';
 import '../lbs_sahbk_screen/labs_sahbk_rules.dart';
 import '../password_screen/password_rules.dart';
 import '../teams_screen/teams.dart';
+import '../who_player_screen/who_rules.dart';
+import '../with_out_screen/with-out_rules.dart';
 
 
 class HomeScreen extends StatefulWidget {

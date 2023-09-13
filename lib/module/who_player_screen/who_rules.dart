@@ -2,17 +2,18 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../module/home_screen/home.dart';
-import '../shared/components/constants.dart';
+import '../../shared/components/constants.dart';
+import '../home_screen/home.dart';
 
-class WithOutRules extends StatefulWidget {
-  const WithOutRules({Key? key}) : super(key: key);
+
+class WhoPlayerRules extends StatefulWidget {
+  const WhoPlayerRules({Key? key}) : super(key: key);
 
   @override
-  State<WithOutRules> createState() => _WithOutRulesState();
+  State<WhoPlayerRules> createState() => _WhoPlayerRulesState();
 }
 
-class _WithOutRulesState extends State<WithOutRules> {
+class _WhoPlayerRulesState extends State<WhoPlayerRules> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -85,7 +86,7 @@ class _WithOutRulesState extends State<WithOutRules> {
                                 onTap: () {
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                      builder: (context) => const HomeScreen(),
+                                      builder: (context) =>  HomeScreen(),
                                     ),
                                   );
                                 },
@@ -98,7 +99,7 @@ class _WithOutRulesState extends State<WithOutRules> {
                                 )),
                           ),
                           const Text(
-                            ' بدون كلام  ',
+                            ' مين اللاعب ',
                             textAlign: TextAlign.end,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -107,7 +108,7 @@ class _WithOutRulesState extends State<WithOutRules> {
                             ),
                           ),
                           const SizedBox(
-                            width: 30,
+                            width: 70,
                           ),
                         ],
                       ),
@@ -127,11 +128,11 @@ class _WithOutRulesState extends State<WithOutRules> {
                               ),
                             ),
                             SizedBox(
-                              height: 6,
+                              height: 20,
                             ),
 
                             Text(
-                              'يتم تمثيل الأسم لزميلك في الفريق و ممنوع الإشارة لأي شئ موجود بالغرفة',
+                              'هناك 5 أدلة من الأسهل للأصعب لكل لاعب و يتم لعب 3 جولات ',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -139,29 +140,9 @@ class _WithOutRulesState extends State<WithOutRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(height: 6,),
+                            SizedBox(height: 10,),
                             Text(
-                              'متاح ٤٥ ثانية لكل فريق لتخمين الاسم , متاح للفريق ٣ تخمينات فقط ',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            SizedBox(height: 6,),
-                            Text(
-                              'في حالة فشل الفريق في تخمين اسم اللاعب , متاح للفريق الأخر التخمين مرة واحدة في ١٠ ثواني',
-                              textAlign: TextAlign.end,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                            ),
-                            SizedBox(height: 6,),
-                            Text(
-                              'يتم لعب ٨ جولات و في حالة التعادل يتم لعب جولة فاصلة',
+                              '   في حالة تخمين اسم خاطئ من الفريق تتحول أفضلية الاجابة الى الفريق الأخر بعد سماع الدليل القادم',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -172,10 +153,10 @@ class _WithOutRulesState extends State<WithOutRules> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      SizedBox(height: 140,),
                       Container(
                         height: 55,
-                        decoration: const BoxDecoration(
+                        decoration:  BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
                               primaryColor,

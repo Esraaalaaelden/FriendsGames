@@ -2,17 +2,17 @@ import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../module/home_screen/home.dart';
-import '../shared/components/constants.dart';
+import '../../shared/components/constants.dart';
+import '../home_screen/home.dart';
 
-class WhoPlayerRules extends StatefulWidget {
-  const WhoPlayerRules({Key? key}) : super(key: key);
+class WithOutRules extends StatefulWidget {
+  const WithOutRules({Key? key}) : super(key: key);
 
   @override
-  State<WhoPlayerRules> createState() => _WhoPlayerRulesState();
+  State<WithOutRules> createState() => _WithOutRulesState();
 }
 
-class _WhoPlayerRulesState extends State<WhoPlayerRules> {
+class _WithOutRulesState extends State<WithOutRules> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,7 +44,7 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                 body: NestedScrollView(
                   headerSliverBuilder:
                       (BuildContext context, bool innerBoxIsScrolled) =>
-                  <Widget>[
+                          <Widget>[
                     SliverAppBar(
                       elevation: 20,
                       automaticallyImplyLeading: false,
@@ -72,8 +72,7 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                       ),
                     )
                   ],
-                  body:
-                  Column(
+                  body: Column(
                     // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
@@ -85,7 +84,7 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                                 onTap: () {
                                   Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                      builder: (context) => const HomeScreen(),
+                                      builder: (context) => HomeScreen(),
                                     ),
                                   );
                                 },
@@ -98,7 +97,7 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                                 )),
                           ),
                           const Text(
-                            ' مين اللاعب ',
+                            ' بدون كلام  ',
                             textAlign: TextAlign.end,
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -107,14 +106,14 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                             ),
                           ),
                           const SizedBox(
-                            width: 70,
+                            width: 30,
                           ),
                         ],
                       ),
                       Container(
                         padding: const EdgeInsets.all(10),
                         width: double.infinity,
-                        child:  Column(
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text(
@@ -127,11 +126,10 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                               ),
                             ),
                             SizedBox(
-                              height: 20,
+                              height: 6,
                             ),
-
                             Text(
-                              'هناك 5 أدلة من الأسهل للأصعب لكل لاعب و يتم لعب 3 جولات ',
+                              'يتم تمثيل الأسم لزميلك في الفريق و ممنوع الإشارة لأي شئ موجود بالغرفة',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -139,9 +137,35 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(height: 10,),
+                            SizedBox(
+                              height: 6,
+                            ),
                             Text(
-                              '   في حالة تخمين اسم خاطئ من الفريق تتحول أفضلية الاجابة الى الفريق الأخر بعد سماع الدليل القادم',
+                              'متاح ٤٥ ثانية لكل فريق لتخمين الاسم , متاح للفريق ٣ تخمينات فقط ',
+                              textAlign: TextAlign.end,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              'في حالة فشل الفريق في تخمين اسم اللاعب , متاح للفريق الأخر التخمين مرة واحدة في ١٠ ثواني',
+                              textAlign: TextAlign.end,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                                fontSize: 20,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 6,
+                            ),
+                            Text(
+                              'يتم لعب ٨ جولات و في حالة التعادل يتم لعب جولة فاصلة',
                               textAlign: TextAlign.end,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -152,10 +176,12 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 140,),
+                      SizedBox(
+                        height: 10,
+                      ),
                       Container(
                         height: 55,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
                               primaryColor,
@@ -165,7 +191,7 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                           ),
                         ),
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,
@@ -176,7 +202,6 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                           ),
                         ),
                       ),
-
                     ],
                   ),
                 ),
