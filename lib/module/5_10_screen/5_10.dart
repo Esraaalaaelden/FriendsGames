@@ -138,13 +138,14 @@ class _FiveGameState extends State<FiveGame> {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
                           if (cubit.fiveXTenCurrentQuestionIndex == -1)
                             const Text(
                               'Press the button to get a random question',
                               textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.white),
                             )
                           else
                             Column(
@@ -174,30 +175,30 @@ class _FiveGameState extends State<FiveGame> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Animate(
-                                child: Icon(
+                                child: const Icon(
                                   Icons.hourglass_bottom,
                                   color: Colors.white,
                                 )
                                     .animate(delay: 2.seconds,
                                         onPlay: (controller) =>
                                             controller.repeat())
-                                    .rotate(duration: 2.seconds),
+                                    .rotate(duration: 3.seconds),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 10,
                               ),
                               BlocBuilder<CountdownCubit, int>(
                                 builder: (context, countdown) {
                                   return Text(
                                     '$countdown',
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontSize: 20.0, color: Colors.white),
                                   );
                                 },
                               ),
                             ],
                           ),
-                          SizedBox(height: 5,),
+                          const SizedBox(height: 5,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -205,7 +206,7 @@ class _FiveGameState extends State<FiveGame> {
                                 onTap: (){
                                   cubit.sTeamPointPlus();
                                 },
-                                child:  Image(
+                                child:  const Image(
                                   image: AssetImage('assets/Ellipse 3.png'),
                                 ),
                               ),
@@ -242,10 +243,10 @@ class _FiveGameState extends State<FiveGame> {
                                       ? null // Disable the button if isButtonDisabled is true
                                       :() {
                                     cubit.fiveXTenChangeQuestion();
-                                    countdownCubit.startCountdown(10);
+                                    countdownCubit.startCountdown(30);
                                     cubit.isButtonDisabled = true;
 
-                                    Future.delayed(Duration(seconds: 10), () {
+                                    Future.delayed(const Duration(seconds: 10), () {
                                       setState(() {
                                         cubit.isButtonDisabled = false; // Enable the button
                                       });
