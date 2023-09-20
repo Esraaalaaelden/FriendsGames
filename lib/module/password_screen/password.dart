@@ -10,6 +10,7 @@ import '../../cubit/game_cubit.dart';
 import '../../shared/components/constants.dart';
 import '../5_10_screen/5_10rules.dart';
 import '../home_screen/home.dart';
+import '../lbs_sahbk_screen/labs_sahbk_rules.dart';
 
 class PasswordGame extends StatefulWidget {
   const PasswordGame({Key? key}) : super(key: key);
@@ -99,7 +100,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                       Navigator.of(context).pushReplacement(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                          const PasswordRules (),
+                                          const PasswordRules(),
                                         ),
                                       );
                                     },
@@ -112,7 +113,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                     )),
                               ),
                               const Text(
-                                ' كلمه السر ',
+                                ' لبس صاحبك ',
                                 textAlign: TextAlign.end,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -164,7 +165,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     child: Text(
-                                      cubit.questions5x10[
+                                      cubit.footballLegends[
                                       cubit.fiveXTenCurrentQuestionIndex],
                                       style: const TextStyle(fontSize: 18.0),
                                       textAlign: TextAlign.center,
@@ -208,6 +209,48 @@ class _PasswordGameState extends State<PasswordGame> {
                               GestureDetector(
                                 onTap: (){
                                   cubit.sTeamPointPlus();
+                                  if (cubit.fTeamPoints == 5) {
+                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                        builder: (context) => const HomeScreen(),
+                                      ),
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: const Text(
+                                          'Winner 🎉',
+                                        ),
+                                        content: Text(
+                                          '${cubit.fTeam} Won',
+                                        ),
+                                      ),
+                                    );
+                                    cubit.sTeamPoints = 0;
+                                    cubit.fTeamPoints = 0;
+                                  }
+                                  else if (cubit.sTeamPoints == 5) {
+                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                        builder: (context) => const HomeScreen(),
+                                      ),
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: const Text(
+                                          'Winner 🎉',
+                                        ),
+                                        content: Text(
+                                          '${cubit.sTeam} Won',
+                                        ),
+                                      ),
+                                    );
+                                    cubit.sTeamPoints = 0;
+                                    cubit.fTeamPoints = 0;
+                                  }
                                 },
                                 child:  const Image(
                                   image: AssetImage('assets/Ellipse 3.png'),
@@ -245,7 +288,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                   onPressed: cubit.isButtonDisabled
                                       ? null // Disable the button if isButtonDisabled is true
                                       :() {
-                                    cubit.fiveXTenChangeQuestion();
+                                    cubit.footballLegendsChangeQuestion();
                                     countdownCubit.startCountdown(30);
                                     cubit.isButtonDisabled = true;
 
@@ -288,6 +331,48 @@ class _PasswordGameState extends State<PasswordGame> {
                               GestureDetector(
                                 onTap: (){
                                   cubit.fTeamPointPlus();
+                                  if (cubit.fTeamPoints == 5) {
+                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                        builder: (context) => const HomeScreen(),
+                                      ),
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: const Text(
+                                          'Winner 🎉',
+                                        ),
+                                        content: Text(
+                                          '${cubit.fTeam} Won',
+                                        ),
+                                      ),
+                                    );
+                                    cubit.sTeamPoints = 0;
+                                    cubit.fTeamPoints = 0;
+                                  }
+                                  else if (cubit.sTeamPoints == 5) {
+                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                        builder: (context) => const HomeScreen(),
+                                      ),
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: const Text(
+                                          'Winner 🎉',
+                                        ),
+                                        content: Text(
+                                          '${cubit.sTeam} Won',
+                                        ),
+                                      ),
+                                    );
+                                    cubit.sTeamPoints = 0;
+                                    cubit.fTeamPoints = 0;
+                                  }
                                 },
                                 child: const Image(
                                   image: AssetImage('assets/Ellipse 4.png'),
@@ -295,7 +380,7 @@ class _PasswordGameState extends State<PasswordGame> {
                               ),
                             ],
                           ),
-                          // ElevatedButton(
+                           //ElevatedButton(
                           //   onPressed: cubit.fiveXTenChangeQuestion,
                           //   child: Text('Get Random Question'),
                           // ),

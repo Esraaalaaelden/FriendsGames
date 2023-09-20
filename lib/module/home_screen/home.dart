@@ -111,20 +111,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           controller: pageController,
                           children: [
                             Container(
-                              //height: 10,width: 10,
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(
-                                      builder: (context) => PasswordRules(),
-                                    ),
-                                  );
-                                },
-                                child: Image(
-                                    image: AssetImage('assets/password.png',)),
-                              ),
-                            ),
-                            Container(
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).pushReplacement(
@@ -143,6 +129,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
                               ),
                             ),
+                            Container(
+                              //height: 10,width: 10,
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) => PasswordRules(),
+                                    ),
+                                  );
+                                },
+                                child: Image(
+                                    image: AssetImage('assets/password.png',)),
+                              ),
+                            ),
+
                             Container(
                               child: GestureDetector(
                                 onTap: () {
@@ -169,6 +170,20 @@ class _HomeScreenState extends State<HomeScreen> {
                                     image: AssetImage('assets/without-talking.png')),
                               ),
                             ),
+
+                            Container(
+                              child: GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pushReplacement(
+                                    MaterialPageRoute(
+                                      builder: (context) =>LbsRules(),
+                                    ),
+                                  );
+                                },
+                                child: Image(
+                                    image: AssetImage('assets/f-your-friend.png')),
+                              ),
+                            ),
                             Container(
                               child: GestureDetector(
                                 onTap: () {
@@ -176,7 +191,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     context: context,
                                     builder: (context) => AlertDialog(
                                       title: const Text(
-                                        'Coming Soon..',
+                                        'Coming Soon......',
                                       ),
 
                                     ),
@@ -189,19 +204,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                 },
                                 child: Image(
                                     image: AssetImage('assets/guess-the-player.png')),
-                              ),
-                            ),
-                            Container(
-                              child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(
-                                      builder: (context) =>LbsRules(),
-                                    ),
-                                  );
-                                },
-                                child: Image(
-                                    image: AssetImage('assets/f-your-friend.png')),
                               ),
                             ),
 

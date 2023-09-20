@@ -228,7 +228,8 @@ class _FiveGameState extends State<FiveGame> {
                                     );
                                     cubit.sTeamPoints = 0;
                                     cubit.fTeamPoints = 0;
-                                  } else if (cubit.sTeamPoints == 5) {
+                                  }
+                                  else if (cubit.sTeamPoints == 5) {
                                     cubit.fiveXTenCurrentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(

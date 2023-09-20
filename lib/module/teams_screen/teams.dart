@@ -164,7 +164,7 @@ class _TeamsPageState extends State<TeamsPage> {
                                 shadowColor: Colors.transparent,
                               ),
                               child: const Text(
-                                'Start',
+                                '    Start     ',
                                 style:
                                 TextStyle(color: Colors.white, fontSize: 25),
                               ),
