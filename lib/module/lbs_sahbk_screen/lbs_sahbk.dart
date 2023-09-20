@@ -140,7 +140,7 @@ class _LabsSahbkState extends State< LabsSahbk > {
                           const SizedBox(
                             height: 30,
                           ),
-                          if (cubit.fiveXTenCurrentQuestionIndex == -1)
+                          if (cubit.currentQuestionIndex == -1)
                             const Text(
                               'Press the button to get a random question',
                               textAlign: TextAlign.center,
@@ -161,7 +161,7 @@ class _LabsSahbkState extends State< LabsSahbk > {
                                     ),
                                     child: Text(
                                       cubit.footballLegends[
-                                      cubit.fiveXTenCurrentQuestionIndex],
+                                      cubit.currentQuestionIndex],
                                       style: const TextStyle(fontSize: 18.0),
                                       textAlign: TextAlign.center,
                                     ),
@@ -256,7 +256,7 @@ class _LabsSahbkState extends State< LabsSahbk > {
                                     shadowColor: Colors.transparent,
                                   ),
                                   child: Text(
-                                    cubit.fiveXTenCurrentQuestionIndex == -1
+                                    cubit.currentQuestionIndex == -1
                                         ? 'Get  Question'
                                         : '     Next     ',
                                     style: const TextStyle(

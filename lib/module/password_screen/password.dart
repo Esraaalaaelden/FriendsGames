@@ -8,9 +8,7 @@ import 'package:friendsgames/module/password_screen/password_rules.dart';
 import '../../countdown_cubit/countdown_cubit.dart';
 import '../../cubit/game_cubit.dart';
 import '../../shared/components/constants.dart';
-import '../5_10_screen/5_10rules.dart';
 import '../home_screen/home.dart';
-import '../lbs_sahbk_screen/labs_sahbk_rules.dart';
 
 class PasswordGame extends StatefulWidget {
   const PasswordGame({Key? key}) : super(key: key);
@@ -145,7 +143,7 @@ class _PasswordGameState extends State<PasswordGame> {
                           const SizedBox(
                             height: 30,
                           ),
-                          if (cubit.fiveXTenCurrentQuestionIndex == -1)
+                          if (cubit.currentQuestionIndex == -1)
                             const Text(
                               'Press the button to get a random question',
                               textAlign: TextAlign.center,
@@ -166,7 +164,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                     ),
                                     child: Text(
                                       cubit.footballLegends[
-                                      cubit.fiveXTenCurrentQuestionIndex],
+                                      cubit.currentQuestionIndex],
                                       style: const TextStyle(fontSize: 18.0),
                                       textAlign: TextAlign.center,
                                     ),
@@ -210,7 +208,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                 onTap: (){
                                   cubit.sTeamPointPlus();
                                   if (cubit.fTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    cubit.currentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                         builder: (context) => const HomeScreen(),
@@ -231,7 +229,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                     cubit.fTeamPoints = 0;
                                   }
                                   else if (cubit.sTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    cubit.currentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                         builder: (context) => const HomeScreen(),
@@ -304,7 +302,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                     shadowColor: Colors.transparent,
                                   ),
                                   child: Text(
-                                    cubit.fiveXTenCurrentQuestionIndex == -1
+                                    cubit.currentQuestionIndex == -1
                                         ? 'Get  Question'
                                         : '     Next     ',
                                     style: const TextStyle(
@@ -333,7 +331,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                 onTap: (){
                                   cubit.fTeamPointPlus();
                                   if (cubit.fTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    cubit.currentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                         builder: (context) => const HomeScreen(),
@@ -354,7 +352,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                     cubit.fTeamPoints = 0;
                                   }
                                   else if (cubit.sTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    cubit.currentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                         builder: (context) => const HomeScreen(),

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:friendsgames/countdown_cubit/countdown_cubit.dart';
-import 'package:friendsgames/module/with_out_screen/with-out_rules.dart';
 
 import '../../cubit/game_cubit.dart';
 import '../../shared/components/constants.dart';
@@ -142,7 +141,7 @@ class _arostyState extends State<arosty> {
                           const SizedBox(
                             height: 30,
                           ),
-                          if (cubit.fiveXTenCurrentQuestionIndex == -1)
+                          if (cubit.currentQuestionIndex == -1)
                             const Text(
                               'Press the button to get a random question',
                               textAlign: TextAlign.center,
@@ -163,7 +162,7 @@ class _arostyState extends State<arosty> {
                                     ),
                                     child: Text(
                                       cubit.footballLegends[
-                                      cubit.fiveXTenCurrentQuestionIndex],
+                                      cubit.currentQuestionIndex],
                                       style: const TextStyle(fontSize: 18.0),
                                       textAlign: TextAlign.center,
                                     ),
@@ -258,7 +257,7 @@ class _arostyState extends State<arosty> {
                                     shadowColor: Colors.transparent,
                                   ),
                                   child: Text(
-                                    cubit.fiveXTenCurrentQuestionIndex == -1
+                                    cubit.currentQuestionIndex == -1
                                         ? 'Get  Question'
                                         : '     Next     ',
                                     style: const TextStyle(

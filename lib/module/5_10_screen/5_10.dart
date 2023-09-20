@@ -95,7 +95,7 @@ class _FiveGameState extends State<FiveGame> {
                                     onTap: () {
                                       cubit.fTeamPoints = 0;
                                       cubit.sTeamPoints = 0;
-                                      cubit.fiveXTenCurrentQuestionIndex = -1;
+                                      cubit.currentQuestionIndex = -1;
                                       Navigator.of(context).pushReplacement(
                                         MaterialPageRoute(
                                           builder: (context) =>
@@ -144,7 +144,7 @@ class _FiveGameState extends State<FiveGame> {
                           const SizedBox(
                             height: 30,
                           ),
-                          if (cubit.fiveXTenCurrentQuestionIndex == -1)
+                          if (cubit.currentQuestionIndex == -1)
                             const Text(
                               'Press the button to get a random question',
                               textAlign: TextAlign.center,
@@ -165,7 +165,7 @@ class _FiveGameState extends State<FiveGame> {
                                     ),
                                     child: Text(
                                       cubit.questions5x10[
-                                          cubit.fiveXTenCurrentQuestionIndex],
+                                          cubit.currentQuestionIndex],
                                       style: const TextStyle(fontSize: 18.0),
                                       textAlign: TextAlign.center,
                                     ),
@@ -212,7 +212,7 @@ class _FiveGameState extends State<FiveGame> {
                                 onTap: () {
                                   cubit.sTeamPointPlus();
                                   if (cubit.fTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    cubit.currentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                         builder: (context) =>
@@ -233,7 +233,7 @@ class _FiveGameState extends State<FiveGame> {
                                     cubit.sTeamPoints = 0;
                                     cubit.fTeamPoints = 0;
                                   } else if (cubit.sTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    cubit.currentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                         builder: (context) =>
@@ -308,7 +308,7 @@ class _FiveGameState extends State<FiveGame> {
                                     shadowColor: Colors.transparent,
                                   ),
                                   child: Text(
-                                    cubit.fiveXTenCurrentQuestionIndex == -1
+                                    cubit.currentQuestionIndex == -1
                                         ? 'Get  Question'
                                         : '     Next     ',
                                     style: const TextStyle(
@@ -337,7 +337,7 @@ class _FiveGameState extends State<FiveGame> {
                                 onTap: () {
                                   cubit.fTeamPointPlus();
                                   if (cubit.fTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    cubit.currentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                         builder: (context) =>
@@ -358,7 +358,7 @@ class _FiveGameState extends State<FiveGame> {
                                     cubit.sTeamPoints = 0;
                                     cubit.fTeamPoints = 0;
                                   } else if (cubit.sTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex = -1;
+                                    cubit.currentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
                                         builder: (context) =>

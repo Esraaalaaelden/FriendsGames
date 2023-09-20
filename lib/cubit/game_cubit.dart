@@ -152,13 +152,13 @@ class GameCubit extends Cubit<GameState> {
 // String secondQuestion = questions[1];
 // and so on...
 
-  int fiveXTenCurrentQuestionIndex = -1;
+  int currentQuestionIndex = -1;
 
 
   bool isButtonDisabled = false;
 
   void fiveXTenChangeQuestion() {
-    fiveXTenCurrentQuestionIndex = Random().nextInt(questions5x10.length);
+    currentQuestionIndex = Random().nextInt(questions5x10.length);
 
     emit(
         GetRandomQuestionState()); // Start a new countdown for the next question
@@ -201,7 +201,7 @@ class GameCubit extends Cubit<GameState> {
     'ألساندرو كوستاكورتا',
   ];
   void withoutTalkingChangeQuestion() {
-    fiveXTenCurrentQuestionIndex = Random().nextInt(withoutTalking.length);
+    currentQuestionIndex = Random().nextInt(withoutTalking.length);
 
     emit(
         GetRandomQuestionState()); // Start a new countdown for the next question
@@ -254,7 +254,7 @@ class GameCubit extends Cubit<GameState> {
     'جرينوود',
   ];
   void footballLegendsChangeQuestion() {
-    fiveXTenCurrentQuestionIndex = Random().nextInt(footballLegends.length);
+    currentQuestionIndex = Random().nextInt(footballLegends.length);
 
     emit(
         GetRandomQuestionState()); // Start a new countdown for the next question
