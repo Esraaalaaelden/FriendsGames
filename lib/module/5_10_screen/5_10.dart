@@ -93,6 +93,9 @@ class _FiveGameState extends State<FiveGame> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
                                     onTap: () {
+                                      cubit.fTeamPoints = 0;
+                                      cubit.sTeamPoints = 0;
+                                      cubit.fiveXTenCurrentQuestionIndex = -1;
                                       Navigator.of(context).pushReplacement(
                                         MaterialPageRoute(
                                           builder: (context) =>
@@ -212,12 +215,15 @@ class _FiveGameState extends State<FiveGame> {
                                     cubit.fiveXTenCurrentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (context) => const HomeScreen(),
+                                        builder: (context) =>
+                                            const HomeScreen(),
                                       ),
                                     );
                                     showDialog(
                                       context: context,
                                       builder: (context) => AlertDialog(
+
+
                                         title: const Text(
                                           'Winner 🎉',
                                         ),
@@ -228,12 +234,12 @@ class _FiveGameState extends State<FiveGame> {
                                     );
                                     cubit.sTeamPoints = 0;
                                     cubit.fTeamPoints = 0;
-                                  }
-                                  else if (cubit.sTeamPoints == 5) {
+                                  } else if (cubit.sTeamPoints == 5) {
                                     cubit.fiveXTenCurrentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (context) => const HomeScreen(),
+                                        builder: (context) =>
+                                            const HomeScreen(),
                                       ),
                                     );
                                     showDialog(
@@ -336,7 +342,8 @@ class _FiveGameState extends State<FiveGame> {
                                     cubit.fiveXTenCurrentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (context) => const HomeScreen(),
+                                        builder: (context) =>
+                                            const HomeScreen(),
                                       ),
                                     );
                                     showDialog(
@@ -356,7 +363,8 @@ class _FiveGameState extends State<FiveGame> {
                                     cubit.fiveXTenCurrentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (context) => const HomeScreen(),
+                                        builder: (context) =>
+                                            const HomeScreen(),
                                       ),
                                     );
                                     showDialog(
