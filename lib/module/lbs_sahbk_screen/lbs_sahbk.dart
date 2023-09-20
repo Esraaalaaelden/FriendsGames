@@ -1,10 +1,8 @@
 import 'package:colorful_safe_area/colorful_safe_area.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:friendsgames/countdown_cubit/countdown_cubit.dart';
-import 'package:friendsgames/module/with_out_screen/with-out_rules.dart';
 
 import '../../cubit/game_cubit.dart';
 import '../../shared/components/constants.dart';
@@ -162,7 +160,7 @@ class _LabsSahbkState extends State< LabsSahbk > {
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     child: Text(
-                                      cubit.withoutTalking[
+                                      cubit.footballLegends[
                                       cubit.fiveXTenCurrentQuestionIndex],
                                       style: const TextStyle(fontSize: 18.0),
                                       textAlign: TextAlign.center,
