@@ -26,6 +26,7 @@ class _arostyState extends State<arosty> {
     return BlocConsumer<GameCubit, GameState>(
       listener: (context, state) {},
       builder: (context, state) {
+
         return Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -93,6 +94,10 @@ class _arostyState extends State<arosty> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
                                     onTap: () {
+                                      cubit.fTeamPoints = 0;
+                                      cubit.sTeamPoints = 0;
+                                      cubit.currentQuestionIndex = -1;
+                                      cubit.isButtonDisabled = false;
                                       Navigator.of(context).pushReplacement(
                                         MaterialPageRoute(
                                           builder: (context) =>

@@ -26,6 +26,8 @@ class _FiveGameState extends State<FiveGame> {
     return BlocConsumer<GameCubit, GameState>(
       listener: (context, state) {},
       builder: (context, state) {
+
+
         return Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -96,6 +98,8 @@ class _FiveGameState extends State<FiveGame> {
                                       cubit.fTeamPoints = 0;
                                       cubit.sTeamPoints = 0;
                                       cubit.currentQuestionIndex = -1;
+                                      cubit.isButtonDisabled = false;
+
                                       Navigator.of(context).pushReplacement(
                                         MaterialPageRoute(
                                           builder: (context) =>

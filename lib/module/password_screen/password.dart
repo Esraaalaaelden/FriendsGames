@@ -28,6 +28,7 @@ class _PasswordGameState extends State<PasswordGame> {
     return BlocConsumer<GameCubit, GameState>(
       listener: (context, state) {},
       builder: (context, state) {
+
         return Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -95,6 +96,10 @@ class _PasswordGameState extends State<PasswordGame> {
                                 padding: const EdgeInsets.all(8.0),
                                 child: GestureDetector(
                                     onTap: () {
+                                      cubit.fTeamPoints = 0;
+                                      cubit.sTeamPoints = 0;
+                                      cubit.currentQuestionIndex = -1;
+                                      cubit.isButtonDisabled = false;
                                       Navigator.of(context).pushReplacement(
                                         MaterialPageRoute(
                                           builder: (context) =>
@@ -111,7 +116,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                     )),
                               ),
                               const Text(
-                                ' لبس صاحبك ',
+                                ' كلمة السر ',
                                 textAlign: TextAlign.end,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
