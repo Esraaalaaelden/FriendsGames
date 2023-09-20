@@ -9,7 +9,7 @@ class CountdownCubit extends Cubit<int> {
     var countdown = seconds;
     emit(countdown);
 
-    final countdownTimer = Timer.periodic(Duration(seconds: 1), (timer) {
+    final countdownTimer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (countdown > 0) {
         countdown--;
         emit(countdown);
