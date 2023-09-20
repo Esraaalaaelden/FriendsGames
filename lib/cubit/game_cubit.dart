@@ -1,4 +1,3 @@
-
 import 'dart:math';
 
 import 'package:bloc/bloc.dart';
@@ -154,18 +153,105 @@ class GameCubit extends Cubit<GameState> {
 // and so on...
 
   int fiveXTenCurrentQuestionIndex = -1;
-  int fiveXTenCountdownSeconds = 10;
+
 
   bool isButtonDisabled = false;
-
 
   void fiveXTenChangeQuestion() {
     fiveXTenCurrentQuestionIndex = Random().nextInt(questions5x10.length);
 
-     // fiveXTenStartCountdown();
-
-    //fiveXTenStartCountdown();
     emit(
         GetRandomQuestionState()); // Start a new countdown for the next question
   }
+
+  //without talking game
+  List<String> withoutTalking = [
+    'غابرييل باتيستوتا',
+    'زين الدين زيدان',
+    'فرانز بيكنباور',
+    'يوهان كرويف',
+    'ماركو فان باستن',
+    'ألفريدو دي ستيفانو',
+    'اوزيبيو',
+    'ليف ياشين',
+    'ميشيل بلاتيني',
+    'باولو مالديني',
+    'فيرينك بوشكاش',
+    'باولو روسي',
+    'رود خوليت',
+    'بوبي تشارلتون',
+    'لوثار ماثيوس',
+    'كارل هاينز رومينيغه',
+    'فرانكو باريزي',
+    'جيرد مولر',
+    'فرانك ريكارد',
+    'لويس فيغو',
+    'روبرتو باجيو',
+    'رونالد كومان',
+    'بيتر شمايكل',
+    'جورجي هاجي',
+    'اوليفر كان',
+    'راؤول',
+    'كاماتشو ماركو',
+    'إيريك كانتونا',
+    'رود فان نستلروي',
+    'غاري لينيكر',
+    'أليساندرو نيستا',
+    'ألساندرو دل بييرو',
+    'ألساندرو كوستاكورتا',
+  ];
+  void withoutTalkingChangeQuestion() {
+    fiveXTenCurrentQuestionIndex = Random().nextInt(withoutTalking.length);
+
+    emit(
+        GetRandomQuestionState()); // Start a new countdown for the next question
+  }
+
+
+
+  //3rosty and other games
+  List<String> footballLegends = [
+    'سيجوردسون',
+    'بويان كريكيتش',
+    'بيانيتش',
+    'ديخيا',
+    'فان دير سار',
+    'جيجز',
+    'سكولز',
+    'جاري نيفيل',
+    'جابرييل هاينز',
+    'ريو فيرديناند',
+    'فيديتش',
+    'باتريس ايفرا',
+    'جي سونج بارك',
+    'كريستيانو رونالدو',
+    'واين روني',
+    'تيفيز',
+    'خوان ماتا',
+    'ماركوس روخو',
+    'كريس سمولينج',
+    'أندرية أونانا',
+    'ليساندرو مارتينيز',
+    'فاران',
+    'ليندلوف',
+    'هاري ماجواير',
+    'لوك شاو',
+    'وان بيساكا',
+    'دييجو دالوت',
+    'مكتوميناي',
+    'كاسيميرو',
+    'كريستيان إريكسن',
+    'برونو فيرنانديز',
+    'ماركوس راشفورد',
+    'جادون سانشو',
+    'انتوني',
+    'مارسيال',
+    'هويلاند',
+    'فيجوريست',
+    'أشلي يونج',
+    'فالنسيا',
+    'حنبعل المجبري',
+    'جرينوود',
+  ];
+
 }
