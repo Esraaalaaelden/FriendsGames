@@ -9,6 +9,7 @@ import 'package:friendsgames/module/with_out_screen/with-out_rules.dart';
 import '../../cubit/game_cubit.dart';
 import '../../shared/components/constants.dart';
 import '../home_screen/home.dart';
+import 'arosty_rules.dart';
 
 class arosty extends StatefulWidget {
   arosty({Key? key}) : super(key: key);
@@ -96,7 +97,7 @@ class _arostyState extends State<arosty> {
                                       Navigator.of(context).pushReplacement(
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                          const WithOutRules(),
+                                          const ArostyRulse(),
                                         ),
                                       );
                                     },
@@ -161,7 +162,7 @@ class _arostyState extends State<arosty> {
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     child: Text(
-                                      cubit.withoutTalking[
+                                      cubit.footballLegends[
                                       cubit.fiveXTenCurrentQuestionIndex],
                                       style: const TextStyle(fontSize: 18.0),
                                       textAlign: TextAlign.center,

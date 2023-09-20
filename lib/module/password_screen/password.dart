@@ -251,6 +251,7 @@ class _PasswordGameState extends State<PasswordGame> {
                                     cubit.sTeamPoints = 0;
                                     cubit.fTeamPoints = 0;
                                   }
+
                                 },
                                 child:  const Image(
                                   image: AssetImage('assets/Ellipse 3.png'),
