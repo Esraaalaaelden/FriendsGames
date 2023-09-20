@@ -22,7 +22,6 @@ class _FiveGameState extends State<FiveGame> {
   Widget build(BuildContext context) {
     var cubit = GameCubit.get(context);
 
-
     final countdownCubit = context.read<CountdownCubit>();
     return BlocConsumer<GameCubit, GameState>(
       listener: (context, state) {},
@@ -210,16 +209,16 @@ class _FiveGameState extends State<FiveGame> {
                                 onTap: () {
                                   cubit.sTeamPointPlus();
                                   if (cubit.fTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex=-1;
+                                    cubit.fiveXTenCurrentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (context) => HomeScreen(),
+                                        builder: (context) => const HomeScreen(),
                                       ),
                                     );
                                     showDialog(
                                       context: context,
                                       builder: (context) => AlertDialog(
-                                        title: Text(
+                                        title: const Text(
                                           'Winner 🎉',
                                         ),
                                         content: Text(
@@ -227,21 +226,19 @@ class _FiveGameState extends State<FiveGame> {
                                         ),
                                       ),
                                     );
-                                    cubit.sTeamPoints=0;
-                                    cubit.fTeamPoints=0;
-
-                                  }
-                                  else if(cubit.sTeamPoints == 5){
-                                    cubit.fiveXTenCurrentQuestionIndex=-1;
+                                    cubit.sTeamPoints = 0;
+                                    cubit.fTeamPoints = 0;
+                                  } else if (cubit.sTeamPoints == 5) {
+                                    cubit.fiveXTenCurrentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (context) => HomeScreen(),
+                                        builder: (context) => const HomeScreen(),
                                       ),
                                     );
                                     showDialog(
                                       context: context,
                                       builder: (context) => AlertDialog(
-                                        title: Text(
+                                        title: const Text(
                                           'Winner 🎉',
                                         ),
                                         content: Text(
@@ -249,9 +246,8 @@ class _FiveGameState extends State<FiveGame> {
                                         ),
                                       ),
                                     );
-                                    cubit.sTeamPoints=0;
-                                    cubit.fTeamPoints=0;
-
+                                    cubit.sTeamPoints = 0;
+                                    cubit.fTeamPoints = 0;
                                   }
                                 },
                                 child: const Image(
@@ -336,16 +332,16 @@ class _FiveGameState extends State<FiveGame> {
                                 onTap: () {
                                   cubit.fTeamPointPlus();
                                   if (cubit.fTeamPoints == 5) {
-                                    cubit.fiveXTenCurrentQuestionIndex=-1;
+                                    cubit.fiveXTenCurrentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (context) => HomeScreen(),
+                                        builder: (context) => const HomeScreen(),
                                       ),
                                     );
                                     showDialog(
                                       context: context,
                                       builder: (context) => AlertDialog(
-                                        title: Text(
+                                        title: const Text(
                                           'Winner 🎉',
                                         ),
                                         content: Text(
@@ -353,21 +349,19 @@ class _FiveGameState extends State<FiveGame> {
                                         ),
                                       ),
                                     );
-                                    cubit.sTeamPoints=0;
-                                    cubit.fTeamPoints=0;
-
-                                  }
-                                  else if(cubit.sTeamPoints == 5){
-                                    cubit.fiveXTenCurrentQuestionIndex=-1;
+                                    cubit.sTeamPoints = 0;
+                                    cubit.fTeamPoints = 0;
+                                  } else if (cubit.sTeamPoints == 5) {
+                                    cubit.fiveXTenCurrentQuestionIndex = -1;
                                     Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(
-                                        builder: (context) => HomeScreen(),
+                                        builder: (context) => const HomeScreen(),
                                       ),
                                     );
                                     showDialog(
                                       context: context,
                                       builder: (context) => AlertDialog(
-                                        title: Text(
+                                        title: const Text(
                                           'Winner 🎉',
                                         ),
                                         content: Text(
@@ -375,9 +369,8 @@ class _FiveGameState extends State<FiveGame> {
                                         ),
                                       ),
                                     );
-                                    cubit.sTeamPoints=0;
-                                    cubit.fTeamPoints=0;
-
+                                    cubit.sTeamPoints = 0;
+                                    cubit.fTeamPoints = 0;
                                   }
                                 },
                                 child: const Image(
