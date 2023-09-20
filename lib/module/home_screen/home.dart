@@ -9,7 +9,6 @@ import '../5_10_screen/5_10rules.dart';
 import '../lbs_sahbk_screen/labs_sahbk_rules.dart';
 import '../password_screen/password_rules.dart';
 import '../teams_screen/teams.dart';
-import '../who_player_screen/who_rules.dart';
 import '../with_out_screen/with-out_rules.dart';
 
 
@@ -172,11 +171,20 @@ class _HomeScreenState extends State<HomeScreen> {
                             Container(
                               child: GestureDetector(
                                 onTap: () {
-                                  Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(
-                                      builder: (context) =>  WhoPlayerRules(),
+                                  showDialog(
+                                    context: context,
+                                    builder: (context) => AlertDialog(
+                                      title: const Text(
+                                        'Coming Soon..',
+                                      ),
+
                                     ),
                                   );
+                                  // Navigator.of(context).pushReplacement(
+                                  //   MaterialPageRoute(
+                                  //     builder: (context) =>  WhoPlayerRules(),
+                                  //   ),
+                                  // );
                                 },
                                 child: Image(
                                     image: AssetImage('assets/guess-the-player.png')),
