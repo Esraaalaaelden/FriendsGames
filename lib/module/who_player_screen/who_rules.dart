@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import '../../shared/components/constants.dart';
 import '../home_screen/home.dart';
 
-
 class WhoPlayerRules extends StatefulWidget {
   const WhoPlayerRules({Key? key}) : super(key: key);
 
@@ -45,7 +44,7 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                 body: NestedScrollView(
                   headerSliverBuilder:
                       (BuildContext context, bool innerBoxIsScrolled) =>
-                  <Widget>[
+                          <Widget>[
                     SliverAppBar(
                       elevation: 20,
                       automaticallyImplyLeading: false,
@@ -73,8 +72,7 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                       ),
                     )
                   ],
-                  body:
-                  Column(
+                  body: Column(
                     // crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
@@ -83,20 +81,21 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(
-                                      builder: (context) =>  HomeScreen(),
-                                    ),
-                                  );
-                                },
-                                child: const Image(
-                                  image: AssetImage(
-                                    'assets/return.png',
+                              onTap: () {
+                                Navigator.of(context).pushReplacement(
+                                  MaterialPageRoute(
+                                    builder: (context) => HomeScreen(),
                                   ),
-                                  height: 40,
-                                  width: 40,
-                                )),
+                                );
+                              },
+                              child: const Image(
+                                image: AssetImage(
+                                  'assets/return.png',
+                                ),
+                                height: 40,
+                                width: 40,
+                              ),
+                            ),
                           ),
                           const Text(
                             ' مين اللاعب ',
@@ -115,7 +114,7 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                       Container(
                         padding: const EdgeInsets.all(10),
                         width: double.infinity,
-                        child:  Column(
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text(
@@ -130,7 +129,6 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                             SizedBox(
                               height: 20,
                             ),
-
                             Text(
                               'هناك 5 أدلة من الأسهل للأصعب لكل لاعب و يتم لعب 3 جولات ',
                               textAlign: TextAlign.end,
@@ -140,7 +138,9 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(height: 10,),
+                            SizedBox(
+                              height: 10,
+                            ),
                             Text(
                               '   في حالة تخمين اسم خاطئ من الفريق تتحول أفضلية الاجابة الى الفريق الأخر بعد سماع الدليل القادم',
                               textAlign: TextAlign.end,
@@ -153,10 +153,12 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 140,),
+                      SizedBox(
+                        height: 140,
+                      ),
                       Container(
                         height: 55,
-                        decoration:  BoxDecoration(
+                        decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
                               primaryColor,
@@ -166,7 +168,7 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                           ),
                         ),
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: () {},
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,
@@ -177,7 +179,6 @@ class _WhoPlayerRulesState extends State<WhoPlayerRules> {
                           ),
                         ),
                       ),
-
                     ],
                   ),
                 ),
