@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../shared/components/constants.dart';
 import '../home_screen/home.dart';
+import 'arosty.dart';
 
 class ArostyRulse extends StatefulWidget {
   const ArostyRulse({Key? key}) : super(key: key);
@@ -185,7 +186,13 @@ class _ArostyRulseState extends State<ArostyRulse> {
                           ),
                         ),
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) => arosty(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,

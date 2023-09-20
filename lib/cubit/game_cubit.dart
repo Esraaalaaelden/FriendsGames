@@ -253,5 +253,11 @@ class GameCubit extends Cubit<GameState> {
     'حنبعل المجبري',
     'جرينوود',
   ];
+  void footballLegendsChangeQuestion() {
+    fiveXTenCurrentQuestionIndex = Random().nextInt(footballLegends.length);
+
+    emit(
+        GetRandomQuestionState()); // Start a new countdown for the next question
+  }
 
 }

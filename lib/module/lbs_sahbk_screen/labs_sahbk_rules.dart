@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../shared/components/constants.dart';
 import '../home_screen/home.dart';
+import 'lbs_sahbk.dart';
 
 class LbsRules extends StatefulWidget {
   const LbsRules({Key? key}) : super(key: key);
@@ -196,7 +197,13 @@ class _LbsRulesState extends State<LbsRules> {
                           ),
                         ),
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.of(context).pushReplacement(
+                              MaterialPageRoute(
+                                builder: (context) =>  LabsSahbk(),
+                              ),
+                            );
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.transparent,
                             shadowColor: Colors.transparent,
