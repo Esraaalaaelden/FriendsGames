@@ -22,6 +22,7 @@ class _FiveGameState extends State<FiveGame> {
   Widget build(BuildContext context) {
     var cubit = GameCubit.get(context);
 
+
     final countdownCubit = context.read<CountdownCubit>();
     return BlocConsumer<GameCubit, GameState>(
       listener: (context, state) {},
@@ -179,7 +180,8 @@ class _FiveGameState extends State<FiveGame> {
                                   Icons.hourglass_bottom,
                                   color: Colors.white,
                                 )
-                                    .animate(delay: 2.seconds,
+                                    .animate(
+                                        delay: 2.seconds,
                                         onPlay: (controller) =>
                                             controller.repeat())
                                     .rotate(duration: 3.seconds),
@@ -198,15 +200,61 @@ class _FiveGameState extends State<FiveGame> {
                               ),
                             ],
                           ),
-                          const SizedBox(height: 5,),
+                          const SizedBox(
+                            height: 5,
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   cubit.sTeamPointPlus();
+                                  if (cubit.fTeamPoints == 5) {
+                                    cubit.fiveXTenCurrentQuestionIndex=-1;
+                                    Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                        builder: (context) => HomeScreen(),
+                                      ),
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: Text(
+                                          'Winner 🎉',
+                                        ),
+                                        content: Text(
+                                          '${cubit.fTeam} Won',
+                                        ),
+                                      ),
+                                    );
+                                    cubit.sTeamPoints=0;
+                                    cubit.fTeamPoints=0;
+
+                                  }
+                                  else if(cubit.sTeamPoints == 5){
+                                    cubit.fiveXTenCurrentQuestionIndex=-1;
+                                    Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                        builder: (context) => HomeScreen(),
+                                      ),
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: Text(
+                                          'Winner 🎉',
+                                        ),
+                                        content: Text(
+                                          '${cubit.sTeam} Won',
+                                        ),
+                                      ),
+                                    );
+                                    cubit.sTeamPoints=0;
+                                    cubit.fTeamPoints=0;
+
+                                  }
                                 },
-                                child:  const Image(
+                                child: const Image(
                                   image: AssetImage('assets/Ellipse 3.png'),
                                 ),
                               ),
@@ -241,17 +289,19 @@ class _FiveGameState extends State<FiveGame> {
                                 child: ElevatedButton(
                                   onPressed: cubit.isButtonDisabled
                                       ? null // Disable the button if isButtonDisabled is true
-                                      :() {
-                                    cubit.fiveXTenChangeQuestion();
-                                    countdownCubit.startCountdown(10);
-                                    cubit.isButtonDisabled = true;
+                                      : () {
+                                          cubit.fiveXTenChangeQuestion();
+                                          countdownCubit.startCountdown(10);
+                                          cubit.isButtonDisabled = true;
 
-                                    Future.delayed(const Duration(seconds: 10), () {
-                                      setState(() {
-                                        cubit.isButtonDisabled = false; // Enable the button
-                                      });
-                                    });
-                                  },
+                                          Future.delayed(
+                                              const Duration(seconds: 10), () {
+                                            setState(() {
+                                              cubit.isButtonDisabled =
+                                                  false; // Enable the button
+                                            });
+                                          });
+                                        },
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: Colors.transparent,
                                     shadowColor: Colors.transparent,
@@ -283,8 +333,52 @@ class _FiveGameState extends State<FiveGame> {
                                 ),
                               ),
                               GestureDetector(
-                                onTap: (){
+                                onTap: () {
                                   cubit.fTeamPointPlus();
+                                  if (cubit.fTeamPoints == 5) {
+                                    cubit.fiveXTenCurrentQuestionIndex=-1;
+                                    Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                        builder: (context) => HomeScreen(),
+                                      ),
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: Text(
+                                          'Winner 🎉',
+                                        ),
+                                        content: Text(
+                                          '${cubit.fTeam} Won',
+                                        ),
+                                      ),
+                                    );
+                                    cubit.sTeamPoints=0;
+                                    cubit.fTeamPoints=0;
+
+                                  }
+                                  else if(cubit.sTeamPoints == 5){
+                                    cubit.fiveXTenCurrentQuestionIndex=-1;
+                                    Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                        builder: (context) => HomeScreen(),
+                                      ),
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: Text(
+                                          'Winner 🎉',
+                                        ),
+                                        content: Text(
+                                          '${cubit.sTeam} Won',
+                                        ),
+                                      ),
+                                    );
+                                    cubit.sTeamPoints=0;
+                                    cubit.fTeamPoints=0;
+
+                                  }
                                 },
                                 child: const Image(
                                   image: AssetImage('assets/Ellipse 4.png'),
